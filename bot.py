@@ -1,4 +1,5 @@
 import json
+import os
 import dateutil.parser
 from dotenv import load_dotenv
 import discord
@@ -31,14 +32,26 @@ async def on_ready():
         if channel is None:
             print(f"Channel with ID '{channel_id}' not found.")
             continue
+        thread_id_input = input('Enter the thread ID (or "skip" to send in the channel): ')
+        if thread_id_input.lower() == 'exit':
+            break
+        if thread_id_input.lower() != 'skip':
+            thread_id = int(thread_id_input)
+            thread = await channel.fetch_thread(thread_id)
+            if thread is None:
+                print(f"Thread with ID '{thread_id}' not found in channel '{channel_id}'.")
+                continue
+            target = thread
+        else:
+            target = channel
         for embed_dict in data['embeds']:
             timestamp_str = embed_dict.pop('timestamp', None)
             embed = discord.Embed.from_dict(embed_dict)
             if timestamp_str:
                 embed.timestamp = dateutil.parser.parse(timestamp_str)
             try:
-                await channel.send(embed=embed)
-                print(f"Embed sent to channel '{channel_id}'.")  # Success feedback
+                await target.send(embed=embed)
+                print(f"Embed sent to target '{target.id}'.")  # Success feedback
             except discord.HTTPException as e:
                 print(f"Failed to send embed: {e}")  # Error handling
 
