@@ -1,0 +1,58 @@
+{
+    "content": null,
+    "embeds": [
+      {
+        "title": "Discord Server Rules",
+        "color": 2829617,
+        "fields": [
+          {
+            "name": "📕 **1.** Follow Discord's ToS:",
+            "value": "> Make sure to follow Discord's Terms of Service. You must be at least 13 years of age in order to be in and use this server.",
+            "inline": true
+          }
+        ]
+      },
+      {
+        "color": 2829617,
+        "fields": [
+          {
+            "name": "📙 **2.** Be Respectful:",
+            "value": "> Respect all users and staff from the community. Use common sense."
+          }
+        ]
+      },
+      {
+        "color": 2829617,
+        "fields": [
+          {
+            "name": "📒 **3.** No advertising:",
+            "value": "> Talking about other tools, servers, etc. is accepted as long as its relevant to the current topic."
+          }
+        ]
+      },
+      {
+        "color": 2829617,
+        "fields": [
+          {
+            "name": "📗 **4.** Keep it SFW:",
+            "value": "> Please keep NSFW (Not Safe For Work) content out of this server, avoid borderline images as well as keeping your status and profile picture SFW."
+          }
+        ]
+      },
+      {
+        "color": 2829617,
+        "fields": [
+          {
+            "name": "📘 **5.** Privacy:",
+            "value": "> Don't share confidential projects, personal information, or otherwise private information without prior consent."
+          }
+        ],
+        "footer": {
+          "text": "Violations will result in a punishment at the discretion of a moderator.\nModerators have the right to take action based on their best judgement.\n\nLast Updated",
+          "icon_url": "https://cdn.discordapp.com/icons/1103426665117397015/bae7518d5a4d3d73e9fbd1f620e43db2.webp?size=160"
+        },
+        "timestamp": "2024-04-14T20:47:00.000Z"
+      }
+    ],
+    "attachments": []
+  }
